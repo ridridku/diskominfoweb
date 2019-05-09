@@ -1,0 +1,1 @@
+<strong>Copyright &copy; <?php echo date('Y'); ?> <a target='_BLANK' href="https://taufikridho.com"> Diskominfo Bandungkab</a>.</strong> All rights reserved.
