@@ -37,7 +37,7 @@ class Model_utama extends CI_model{
     }
 
     function banner($dari, $jumlah){
-        return $this->db->query("SELECT * FROM banner ORDER BY id_banner DESC LIMIT $dari, $jumlah");
+        return $this->db->query("SELECT * FROM banner ORDER BY id_banner ASC LIMIT $dari, $jumlah");
     }
 
     function kunjungan(){
