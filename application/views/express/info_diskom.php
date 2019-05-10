@@ -1,10 +1,13 @@
 <!--/#logo client-->
-<div class="clients white-bg" id="clients" role="region" aria-label=" Affiliates Logos">
+<!--<div class="clients white-bg" id="clients" role="region" aria-label=" Affiliates Logos">
 <div class="container">
 <ul class="client-logos">
 <li>
 <a href="http://diskominfo.bandungkab.go.id" title="">
 <img src="//dkis.cirebonkota.go.id/wp-content/uploads/2017/04/Sekre-Logo.png" alt="Logo">
+
+
+ echo "<img width='100%' src='".base_url()."asset/foto_banner/".$record['gambar']."'>";
 </a>
 </li>
 <li>
@@ -39,11 +42,36 @@
 </li>
 </ul>
 </div>
+</div>-->
+
+
+
+
+
+<div class="clients white-bg" id="clients" role="region" aria-label=" Affiliates Logos">
+<div class="container">
+    
+    <ul class="client-logos">
+<?php
+              $get_banner=base_url().'/asset/foto-banner';
+                $banner = $this->model_utama->banner(0,10); 
+                foreach ($banner->result_array() as $rows){
+                    echo "<li><a href='".$rows['url']."' title=''target='_blank'>"
+                        . "<img   src='".base_url()."asset/foto_banner/$rows[gambar]'  alt='Logo'></a> ";
+                    echo "</li >"; 
+                }
+            ?>
+
+    </ul>
 </div>
+</div>
+
 
     <!--/#logo client-->
 <?php
 $geturi=base_url().'/template/'.template();
+
+$get_banner=base_url().'/asset/foto-banner';
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -61,99 +89,7 @@ echo "<section id='services' style='background-color:#ffffff; ' >
                 <p class='text-center wow fadeInDown'>Data, Informasi dan Layanan pada Dinas Komunikasi Informatika dan Statistik Kabupaten Bandung</p>
             </div>
 
-            <div class='row'>
-                <div class='features'>
-                    <div class='col-md-4 col-sm-6 wow fadeInUp' data-wow-duration='300ms' data-wow-delay='0ms'>
-                        <div class='media service-box'>
-                            <div class='pull-left'>
-                                <img src='$geturi/images/icon1.png' alt='img'>
-                            </div>
-                            <div class='media-body'>
-                                <h4 class='media-heading'>SEKRETARIAT</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur 
-ing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipis
-ing elit, sed do eiusmod .</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class='col-md-4 col-sm-6 wow fadeInUp' data-wow-duration='300ms' data-wow-delay='100ms'>
-                        <div class='media service-box'>
-                            <div class='pull-left'>
-                                <img src='$geturi/images/icon2.png' alt='img'>
-                            </div>
-                            <div class='media-body'>
-                                <h4 class='media-heading'>BIDANG STATISTIK</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur 
-ing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipis
-ing elit, sed do eiusmod .</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class='col-md-4 col-sm-6 wow fadeInUp' data-wow-duration='300ms' data-wow-delay='200ms'>
-                        <div class='media service-box'>
-                            <div class='pull-left'>
-                                <img src='$geturi/images/icon3.png' alt='img'>
-                            </div>
-                            <div class='media-body'>
-                                <h4 class='media-heading'>BIDANG TIK</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur 
-ing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipis
-ing elit, sed do eiusmod .</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                
-                    <div class='col-md-4 col-sm-6 wow fadeInUp' data-wow-duration='300ms' data-wow-delay='300ms'>
-                        <div class='media service-box'>
-                            <div class='pull-left'>
-                               <img src='$geturi/images/icon4.png' alt='img'>
-                            </div>
-                            <div class='media-body'>
-                               <h4 class='media-heading'>BIDANG APTIKA</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur 
-ing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipis
-ing elit, sed do eiusmod .</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class='col-md-4 col-sm-6 wow fadeInUp' data-wow-duration='300ms' data-wow-delay='400ms'>
-                        <div class='media service-box'>
-                            <div class='pull-left'>
-                               <img src='$geturi/images/icon5.png' alt='img'>
-                            </div>
-                            <div class='media-body'>
-                                <h4 class='media-heading'>BIDANG KIP</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur 
-ing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipis
-ing elit, sed do eiusmod .</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-
-                    <div class='col-md-4 col-sm-6 wow fadeInUp' data-wow-duration='300ms' data-wow-delay='500ms'>
-                        <div class='media service-box'>
-                            <div class='pull-left'>
-                                <img src='$geturi/images/icon6.png' alt='img'>
-                            </div>
-                            <div class='media-body'>
-                                <h4 class='media-heading'>KEAMANAN INFORMASI DAN PERSANDIAN</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur 
-ing elit, sed do eiusmod tempor incididunt ut
-labore et dolore magna aliqua. Ut enim ad minim Lorem ipsum dolor sit amet, consectetur adipis
-ing elit, sed do eiusmod .</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                </div>
-            </div><!--/.row-->    
+              
         </div><!--/.container-->
     </section><!--/#services-->";
 ?>
