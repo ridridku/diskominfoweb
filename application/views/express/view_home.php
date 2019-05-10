@@ -16,10 +16,10 @@
                         if ($row['gambar'] == ''){ $foto = 'small_no-image.jpg'; }else{ $foto = $row['gambar']; }
                         echo "
 						
-						<div class='section-header'>
-						<h2 class='section-title text-center wow fadeInDown center'>&nbsp; $rows[nama_kategori]</h2>
-						</div>
-						
+                                <div class='section-header'>
+                                <h2 class='section-title text-center wow fadeInDown center'>&nbsp; $rows[nama_kategori]</h2>
+                                </div>
+
                               <div>
                                 <img class='img-thumbnail' width='100%' style='height:100%' src='".base_url()."asset/foto_berita/".$foto."'><br>
                                 <a href='".base_url()."berita/detail/$row[judul_seo]'><strong>".$row['judul']."</strong></a><br>
